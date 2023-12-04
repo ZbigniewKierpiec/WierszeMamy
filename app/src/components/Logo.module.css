@@ -1,0 +1,9 @@
+.logo {
+    width: 12rem;
+    height: 12rem;
+    background-image: url('https://cdn.vectorstock.com/i/preview-1x/78/55/feather-logo-writing-quill-stroke-black-icon-vector-48457855.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  

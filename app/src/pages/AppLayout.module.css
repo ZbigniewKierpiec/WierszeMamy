@@ -1,0 +1,30 @@
+.app {
+  height: 100vh;
+  padding: 2.4rem;
+  overscroll-behavior-y: none;
+
+  background-color: rgb(68, 157, 230);
+  font-size: 5rem;
+  color: white;
+}
+
+.section {
+  margin: 0 auto;
+  width: 90%;
+  height: calc(85vh);
+  /* background-color: skyblue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 95%;
+  height: 85%;
+  background-color: slateblue;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 4rem;
+  /* overflow: hidden; */
+}

@@ -1,0 +1,29 @@
+.login{
+    height: 100vh;
+    padding: 2.4rem;
+    font-size: 5rem;
+    background-color: var(--color-dark--1);
+}
+
+
+.form {
+    background-color: var(--color-dark--2);
+    border-radius: 7px;
+    padding: 2rem 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    /* Different from other form */
+    width: 48rem;
+    margin: 8rem auto;
+    color: white;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
