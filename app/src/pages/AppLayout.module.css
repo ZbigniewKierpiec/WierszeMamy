@@ -20,7 +20,7 @@
 }
 
 .main {
-  position: relative;
+  /* position: relative; */
   width: 95%;
   height: 85%;
   /* background-color: slateblue; */
@@ -29,6 +29,19 @@
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 2rem;
   padding: 3rem;
+}
+.mainActive {
+  background: rgba(255, 255, 255, 0.3); /* Adjust the opacity as needed */
+  filter: blur(2px);
+}
+.overlay {
+  width: 95%;
+  height: 85%;
+  position: relative !important;
+  background: rgba(255, 255, 255, 0.5); /* Adjust the opacity as needed */
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+  padding: 20px;
 }
 
 .table {
@@ -80,7 +93,7 @@
 .item {
   background-color: red;
   font-size: 4rem;
- 
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,9 +106,9 @@
 
 .a {
   text-decoration: none;
- background-color: black;
- color: white;
- display: block;
- width: 50px;
- height: 100%;
+  background-color: black;
+  color: white;
+  display: block;
+  width: 50px;
+  height: 100%;
 }

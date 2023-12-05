@@ -1,5 +1,5 @@
 .wiersze {
-  position: relative !important;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +12,9 @@
 
   border-radius: 0.3rem;
   cursor: pointer;
+  text-transform: capitalize;
+   
+
 }
 
 .top {
@@ -22,7 +25,11 @@
   color: #bfa100;
   color: white;
 }
-
+.title{
+  position: absolute;
+  top: 10%;
+  text-transform: capitalize;
+}
 .bottom {
   position: absolute;
   bottom: 10%;

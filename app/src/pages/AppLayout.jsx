@@ -7,124 +7,63 @@ import PageNav from "../components/PageNav";
 import Logo from "../components/Logo";
 import Wiersze from "../components/wiersze";
 import WierszeDetails from "../components/WierszeDetails";
+import Footer from "../components/Footer";
 
 const data = [
   {
     id: 1,
-    name: "We wszystkich mowach i w języku duszy,Nad wszystkie są dwa słowa,Jak w kroplach rosy po suszy,W nich skarb żywota się chowa.Jak dwie perełki w oceanie życia,Jak dwie gwiazdeczki na niebie,wiecą nam do powiciaDwa słowa - kocham ciebie.",
+    title: "czymże jest życie",
+    name: "czymże jest życie bez milosci , Bez czułych spojrzeń serca drżenia , Bez pocalonków bez tęsknoty , Bez tego życie sensu niema. I nie ma granic , czy podzielenia , W miłosci nie ma to znaczenia , Czy jesteś biedny , czy bogaty tego samego doznasz cierpenia , jeśli miłosci ci nie odwzajemnia tak bliska droga ci osoba , strzałą przebite twoje serce , ciernista twoja droga, lecz kochaj mocno i gorąco , bo czymże życie bez milości choć często rani cię okrutnie lecz bez niej byłoby jeszcze smutniej !",
   },
   {
     id: 2,
-    name: "Każdy nowy dzień jest kwiatem Który zakwita w naszych rękach Tam gdzie się kocha, nigdy nie zapada noc.",
+    title: "niepokój w oczach",
+    name: "te oczy , co cieszą i ranią, te chwile, które minąć muszą , te myśli które spać nie dają , czy one byc muszą?, ta radość co w smutek się zmienia , ten smutek co pali jak ogień , i wciąż ten niepokój w mej duszy , co rozum i rozsądek głuszy , jak ciężko samej z myślami , jak trudno jest życ tylko snami , jak gnębi ta myśl niepojęta , ze bylam już o krok od szczęścia!",
   },
   {
     id: 3,
-    name: "Serce to cząstka człowieka,Które tęskni, kocha i czeka.",
+    title: "dla miłego",
+    name: "każda minuta była trwogą  , czy znowu dziś zobaczę cię , niepewność serce moje rwała , usta szeptały imię twe , chciałam nauczyć się na pamieć , twej twarzy , włosów , twoich rąk , chciałam zatrzymać je na stałe , by były przy mnie , ze mną wciaż , patrzyłam ciągle gdzieś daleko jakbym tam dojrzeć mogła cię lecz ciebie zabrał los w nieznane gdzieś po świecie wodzi cię , nie wiem co robisz , o czym myślisz? , kto sercu twemu bliski jest , kto znowu w głowie ci zawrócil kogo znów stac na taki gest , lecz ciągle siebie pytam czy mnie pamiętasz i wrócisz tu , i czy będziemy razem szli , przez życia piękne dni",
   },
   {
     id: 4,
-    name: " Wciąż rozmyślasz. Uparcie i skrycie.Patrzysz w okno i smutek masz w oku...Przecież mnie kochasz nad życie?Sam mówiłeś przeszłego roku...  ",
+    title: "bezsenność",
+    name: "już pierwsza na zegarze , a ja nie mogę spać , cały dzień , pełen wrażeń , nie chce mi snu jeszcze dać , siedzę i piszę wiersze a wkoło cicho tak , już będą cykać świerszcze , a ja wciąż nie mogę spać !",
   },
   {
     id: 5,
-    name: "Jest jeden kwiat - kwiat jak wiosenne zorze,Tak pełen blasków i woniących tchnień,Lecz rwać go można w rannej tylko porze,  Jak słodką mannę we wschodzący dzień, Miłości kwiat.Więc zrywaj kwiat! korzystaj z błogiej chwili! W uroczy wiąż miłość z młodością ślub!Nim słonce życia na zachód się schyliNim wrzące serce zmrozi zimny grób -Korzystaj z lat,Rwij miłości kwiat!  ",
+    title: "pijak",
+    name: "idzie chwiejnym krokiem , z łzawym okiem , piosenki głośno śpiewa , aż zapatrzyły sie drzewa ",
   },
   {
     id: 6,
-    name: "Bo Cię kocham i już,bo z Tobą zawsze jest sens a bez Ciebie go nie ma,bo z Tobą można konie kraść,bo z Tobą można pójść na koniec świata i nie czuć zmęczenia,bo lubię kiedy się uśmiechasz,",
+    title: "choinka",
+    name: "skrzy się i mieni tysiącem promieni , w bańkach odbija się świat , taka cudna pachnąca w zieleni , jak najpięknieszy kwiat , nasza chionka świąteczna taka wysoka do nieba a pod nią prezentów moc w tę wigilijną jedyną noc",
   },
   {
     id: 7,
-    name: "Najlepsza miłość to ta która budzi duszę,pcha Nas ku lepszemu, rozpala w sercach ogień a w duszy sieje spokój.",
+    title: "wizerunek",
+    name: "oczy twoje przecudne , w oczach odbija się świat , gdy spojrzysz na mnie tak cudnie , to aż mi oddechu brak! , usta twe usta czerwone jak maliny w borze ja na twoich ustach , pocałunek złożę , włosy włosy twe czarne , jak bez księżyca noc , uwielbiam patrzeć na nie , i włożyc w twe włosy mą dłoń ",
   },
   {
     id: 8,
-    name: "Każdy nowy dzień jest kwiatem Który zakwita w naszych rękach Tam gdzie się kocha, nigdy nie zapada noc.",
+    title: "śmierć",
+    name: "pojawia śię w białym habicie , ponoć piękna i młoda , zabiera ludzkie życie , nieubłagana , zimna i wroga",
   },
   {
     id: 9,
-    name: "Serce to cząstka człowieka,Które tęskni, kocha i czeka.",
+    title: "droga",
+    name: "droga utarta udeptana , moja droga kochana , chodzę nią całe życie i podziwiam w zachwycie",
   },
   {
     id: 10,
-    name: " Wciąż rozmyślasz. Uparcie i skrycie.Patrzysz w okno i smutek masz w oku...Przecież mnie kochasz nad życie?Sam mówiłeś przeszłego roku...  ",
+    title: "opowiem wszystkim",
+    name: "opowiem słońcu i gwiazdom na błękicie , że bardziej cię kocham niż swoje życie , i deszczowi opowiem co swymi kropelkami , zalewa me okno jak ja swymi łzami , zalewam kartkę białą co wiersz na nie pisze , i wiatrowi opowiem i kwiatom w ogrodzie opowiem ja wszystkim jak ja kocham ciebie",
   },
   {
     id: 11,
-    name: "Jest jeden kwiat - kwiat jak wiosenne zorze,Tak pełen blasków i woniących tchnień,Lecz rwać go można w rannej tylko porze,  Jak słodką mannę we wschodzący dzień, Miłości kwiat.Więc zrywaj kwiat! korzystaj z błogiej chwili! W uroczy wiąż miłość z młodością ślub!Nim słonce życia na zachód się schyliNim wrzące serce zmrozi zimny grób -Korzystaj z lat,Rwij miłości kwiat!  ",
-  },
-  {
-    id: 12,
-    name: "Bo Cię kocham i już,bo z Tobą zawsze jest sens a bez Ciebie go nie ma,bo z Tobą można konie kraść,bo z Tobą można pójść na koniec świata i nie czuć zmęczenia,bo lubię kiedy się uśmiechasz,",
-  },
-  {
-    id: 13,
-    name: "Najlepsza miłość to ta która budzi duszę,pcha Nas ku lepszemu, rozpala w sercach ogień a w duszy sieje spokój.",
-  },
-  {
-    id: 14,
-    name: "Każdy nowy dzień jest kwiatem Który zakwita w naszych rękach Tam gdzie się kocha, nigdy nie zapada noc.",
-  },
-  {
-    id: 15,
-    name: "Serce to cząstka człowieka,Które tęskni, kocha i czeka.",
-  },
-  {
-    id: 16,
-    name: " Wciąż rozmyślasz. Uparcie i skrycie.Patrzysz w okno i smutek masz w oku...Przecież mnie kochasz nad życie?Sam mówiłeś przeszłego roku...  ",
-  },
-  {
-    id: 17,
-    name: "Jest jeden kwiat - kwiat jak wiosenne zorze,Tak pełen blasków i woniących tchnień,Lecz rwać go można w rannej tylko porze,  Jak słodką mannę we wschodzący dzień, Miłości kwiat.Więc zrywaj kwiat! korzystaj z błogiej chwili! W uroczy wiąż miłość z młodością ślub!Nim słonce życia na zachód się schyliNim wrzące serce zmrozi zimny grób -Korzystaj z lat,Rwij miłości kwiat!  ",
-  },
-  {
-    id: 18,
-    name: "Bo Cię kocham i już,bo z Tobą zawsze jest sens a bez Ciebie go nie ma,bo z Tobą można konie kraść,bo z Tobą można pójść na koniec świata i nie czuć zmęczenia,bo lubię kiedy się uśmiechasz,",
-  },
-  {
-    id: 19,
-    name: "Najlepsza miłość to ta która budzi duszę,pcha Nas ku lepszemu, rozpala w sercach ogień a w duszy sieje spokój.",
-  },
-
-  {
-    id: 20,
-    name: " Wciąż rozmyślasz. Uparcie i skrycie.Patrzysz w okno i smutek masz w oku...Przecież mnie kochasz nad życie?Sam mówiłeś przeszłego roku...  ",
-  },
-  {
-    id: 21,
-    name: "Jest jeden kwiat - kwiat jak wiosenne zorze,Tak pełen blasków i woniących tchnień,Lecz rwać go można w rannej tylko porze,  Jak słodką mannę we wschodzący dzień, Miłości kwiat.Więc zrywaj kwiat! korzystaj z błogiej chwili! W uroczy wiąż miłość z młodością ślub!Nim słonce życia na zachód się schyliNim wrzące serce zmrozi zimny grób -Korzystaj z lat,Rwij miłości kwiat!  ",
-  },
-  {
-    id: 22,
-    name: "Bo Cię kocham i już,bo z Tobą zawsze jest sens a bez Ciebie go nie ma,bo z Tobą można konie kraść,bo z Tobą można pójść na koniec świata i nie czuć zmęczenia,bo lubię kiedy się uśmiechasz,",
-  },
-  {
-    id: 23,
-    name: "Najlepsza miłość to ta która budzi duszę,pcha Nas ku lepszemu, rozpala w sercach ogień a w duszy sieje spokój.",
-  },
-  {
-    id: 24,
-    name: "Każdy nowy dzień jest kwiatem Który zakwita w naszych rękach Tam gdzie się kocha, nigdy nie zapada noc.",
-  },
-  {
-    id: 25,
-    name: "Serce to cząstka człowieka,Które tęskni, kocha i czeka.",
-  },
-  {
-    id: 26,
-    name: " Wciąż rozmyślasz. Uparcie i skrycie.Patrzysz w okno i smutek masz w oku...Przecież mnie kochasz nad życie?Sam mówiłeś przeszłego roku...  ",
-  },
-  {
-    id: 27,
-    name: "Jest jeden kwiat - kwiat jak wiosenne zorze,Tak pełen blasków i woniących tchnień,Lecz rwać go można w rannej tylko porze,  Jak słodką mannę we wschodzący dzień, Miłości kwiat.Więc zrywaj kwiat! korzystaj z błogiej chwili! W uroczy wiąż miłość z młodością ślub!Nim słonce życia na zachód się schyliNim wrzące serce zmrozi zimny grób -Korzystaj z lat,Rwij miłości kwiat!  ",
-  },
-  {
-    id: 28,
-    name: "Bo Cię kocham i już,bo z Tobą zawsze jest sens a bez Ciebie go nie ma,bo z Tobą można konie kraść,bo z Tobą można pójść na koniec świata i nie czuć zmęczenia,bo lubię kiedy się uśmiechasz,",
-  },
-  {
-    id: 29,
-    name: "Najlepsza miłość to ta która budzi duszę,pcha Nas ku lepszemu, rozpala w sercach ogień a w duszy sieje spokój.",
+    title: "",
+    name: "",
   },
 ];
 
@@ -137,10 +76,11 @@ export default function AppLayout() {
   const records = data.slice(firstIndex, lastIndex);
   const npages = Math.ceil(data.length / recordsPerPage);
   const numbers = [...Array(npages + 1).keys()].slice(1);
+  const [details, setDetails] = useState([]);
   return (
     <main className={styles.app}>
       <PageNav></PageNav>
-      {active && <WierszeDetails setActive={setActive}    />}
+      {active && <WierszeDetails details={details} setActive={setActive} />}
       <div className={styles.section}>
         <section className={styles.main}>
           {/* <table className={styles.table}>
@@ -194,9 +134,10 @@ export default function AppLayout() {
             ))}
           </div> */}
           {records.map((item) => (
-            <Wiersze key={item.id}  handleActive={handleActive}        item={item} />
+            <Wiersze key={item.id} handleActive={handleActive} item={item} />
           ))}
         </section>
+
         <nav className={styles.nav}>
           <ul className="pagination">
             <li className={styles.itemBtn}>
@@ -233,12 +174,10 @@ export default function AppLayout() {
     </main>
   );
 
-
- function handleActive() {
-     setActive(active=>active=true)
- }
-
-
+  function handleActive(item) {
+    setDetails(item);
+    setActive((active) => (active = true));
+  }
 
   function nextPage() {
     if (currentPage !== npages) {

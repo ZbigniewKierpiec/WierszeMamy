@@ -1,5 +1,5 @@
 .homepage {
-
+  position: relative;
   height: calc(100vh - 5rem);
   height: 100vh;
   background: rgb(2, 0, 36);
@@ -23,9 +23,13 @@
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: 5.5rem;
   letter-spacing: .4rem;
   color: rgba(255, 255, 255, 0.74);
+}
+.span{
+  font-size: 4rem;
+  font-weight: bolder;
 }
 
 .titleBtn {

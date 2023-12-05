@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Homepage.module.css";
 import { useNavigate } from "react-router-dom";
 import PageNav from "../components/PageNav";
+import Footer from "../components/Footer";
 export default function Homepage() {
   const navigate = useNavigate();
 
@@ -13,9 +14,9 @@ export default function Homepage() {
     <main className={styles.homepage}>
 
       <section>
-        <h1>
-          Światło wierszy Haliny Kierpiec <br></br>{" "}
-          <span className={styles.title}>
+        <h1 className={styles.title}>
+          Światło wierszy Haliny Kierpiec <br></br>  <br></br>  {" "}
+          <span className={styles.span}>
             {" "}
             <i>Słowa, które malują emocje na kartach życia</i>{" "}
           </span>
@@ -25,6 +26,7 @@ export default function Homepage() {
       <button onClick={handleClick} className={styles.titleBtn}>
         Zacznij Czytac
       </button>
+      <Footer/>
     </main>
   );
 }

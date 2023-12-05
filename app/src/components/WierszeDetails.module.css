@@ -1,12 +1,23 @@
 .box {
-  width: 50%;
-  height: 55%;
+  width: 60%;
+  height: 70%;
   background-color: red;
+  background: #ff9a3c; 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem;
+  text-align: justify;
+ 
+  letter-spacing: .1rem;
+  font-family: Georgia, sans-serif;
+ 
+ 
 }
 
 .times {
@@ -15,3 +26,35 @@
   right: 3%;
   cursor: pointer;
 }
+
+.title{
+  position: absolute;
+  top: 10%;
+  text-transform: capitalize;
+  font-size: 4rem;
+}
+
+.left {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-size: 6rem;
+    color: #bfa100;
+    color: white;
+  }
+  
+  .right {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    font-size: 6rem;
+    color: white;
+  }
+  
+  h1{
+    font-size: 3rem;
+    text-transform:capitalize;
+    line-height: 40px;
+   
+    /* line-height: 50px; */
+  }
