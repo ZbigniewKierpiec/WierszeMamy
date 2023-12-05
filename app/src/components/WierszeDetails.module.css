@@ -1,0 +1,17 @@
+.box {
+  width: 50%;
+  height: 55%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+}
+
+.times {
+  position: absolute;
+  top: 0;
+  right: 3%;
+  cursor: pointer;
+}

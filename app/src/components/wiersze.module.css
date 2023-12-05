@@ -1,9 +1,32 @@
-.wiersze{
-  border: 1px solid black;
+.wiersze {
+  position: relative !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.4rem;
+  padding: 4rem;
+  font-family: Georgia, sans-serif;
+  font-weight: bolder;
+  word-spacing: 0.3rem;
+  background-color: rgb(235, 105, 12);
 
-  
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.top {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 2rem;
+  color: #bfa100;
+  color: white;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  font-size: 2rem;
+  color: white;
 }

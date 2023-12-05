@@ -2,7 +2,7 @@
   height: 100vh;
   padding: 2.4rem;
   overscroll-behavior-y: none;
-
+  position: relative;
   background-color: rgb(68, 157, 230);
   font-size: 5rem;
   color: white;
@@ -23,12 +23,12 @@
   position: relative;
   width: 95%;
   height: 85%;
-  background-color: slateblue;
+  /* background-color: slateblue; */
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 4rem;
-  padding: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding: 3rem;
 }
 
 .table {

@@ -1,10 +1,12 @@
-import React, { useRef, useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import styles from "./AppLayout.module.css";
 import PageNav from "../components/PageNav";
 import Logo from "../components/Logo";
 import Wiersze from "../components/wiersze";
+import WierszeDetails from "../components/WierszeDetails";
 
 const data = [
   {
@@ -128,6 +130,7 @@ const data = [
 
 export default function AppLayout() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [active, setActive] = useState(false);
   const recordsPerPage = 6;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
@@ -137,6 +140,7 @@ export default function AppLayout() {
   return (
     <main className={styles.app}>
       <PageNav></PageNav>
+      {active && <WierszeDetails setActive={setActive}    />}
       <div className={styles.section}>
         <section className={styles.main}>
           {/* <table className={styles.table}>
@@ -190,7 +194,7 @@ export default function AppLayout() {
             ))}
           </div> */}
           {records.map((item) => (
-            <Wiersze key={item.id} item={item} />
+            <Wiersze key={item.id}  handleActive={handleActive}        item={item} />
           ))}
         </section>
         <nav className={styles.nav}>
@@ -210,7 +214,7 @@ export default function AppLayout() {
               >
                 <a
                   onClick={() => changeCPage(item)}
-                  className="page-link fs-1"
+                  className="page-link fs-2"
                   href="#"
                 >
                   {item}
@@ -228,6 +232,13 @@ export default function AppLayout() {
       </div>
     </main>
   );
+
+
+ function handleActive() {
+     setActive(active=>active=true)
+ }
+
+
 
   function nextPage() {
     if (currentPage !== npages) {
