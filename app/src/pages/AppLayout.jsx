@@ -9,6 +9,7 @@ import Wiersze from "../components/wiersze";
 import WierszeDetails from "../components/WierszeDetails";
 import Footer from "../components/Footer";
 import MattButtonEffect from "../components/Buttons/MattButtonEffect";
+import Detale from "../components/Testy/Detale";
 
 const data = [
   {
@@ -105,7 +106,7 @@ const data = [
 
 export default function AppLayout() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
   const recordsPerPage = 6;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
@@ -116,7 +117,7 @@ export default function AppLayout() {
   return (
     <main className={styles.app}>
       <PageNav></PageNav>
-      {active && <WierszeDetails details={details} setActive={setActive} />}
+      {active && <Detale details={details} setActive={setActive} />}
       <div className={styles.section}>
         <section
           className={`${styles.main} ${active ? styles.mainActive : ""}`}
@@ -191,13 +192,13 @@ export default function AppLayout() {
             {numbers.map((item, index) => (
               <li
                 key={index}
-                className={`page-item d-flex  align-items-center ${
+                className={`page-item d-flex  align-items-center  ${
                   currentPage === item ? "active" : ""
                 }`}
               >
                 <a
                   onClick={() => changeCPage(item)}
-                  className="page-link fs-2"
+                  className="page-link fs-2   "
                   href="#"
                 >
                   {item}

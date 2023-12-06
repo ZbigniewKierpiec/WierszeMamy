@@ -18,8 +18,6 @@ export default function WierszeDetails({ setActive, details }) {
         <FontAwesomeIcon icon={faQuoteLeft} />
       </span>
 
-      <MattButtonEffect/>
-
       <h1>{details.name}</h1>
       <span className={styles.right}>
         {" "}
