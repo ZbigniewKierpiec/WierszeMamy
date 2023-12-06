@@ -18,7 +18,7 @@ export default function Homepage() {
           Światło wierszy Haliny Kierpiec <br></br>  <br></br>  {" "}
           <span className={styles.span}>
             {" "}
-            <i>Słowa, które malują emocje na kartach życia</i>{" "}
+            <i>Słowa,które malują emocje na kartach życia</i>{" "}
           </span>
         </h1>
       </section>

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import styles from "./AppLayout.module.css";
+import styles from "./AppLayout.module.scss";
 import PageNav from "../components/PageNav";
 import Logo from "../components/Logo";
 import Wiersze from "../components/wiersze";
