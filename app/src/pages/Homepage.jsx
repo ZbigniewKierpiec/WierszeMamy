@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Homepage.module.css";
+import styles from "./Homepage.module.scss";
 import { useNavigate } from "react-router-dom";
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
