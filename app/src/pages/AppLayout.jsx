@@ -62,8 +62,43 @@ const data = [
   },
   {
     id: 11,
-    title: "",
-    name: "",
+    title: "raz jeden tylko się żyje",
+    name: "raz jeden tylko sie żyje , więc się upajaj życiem , kochaj tańcz i śpiewaj , pokaż talenty ukryte , raz tylko jest nam dane , podziwiać piękno świata widzieć cudną naturę góry co śnieg je przygniata , raz jeden tylko możesz , tak igrać z przeznaczeniem , raz jeden bo kiedy umrzesz trumna będzie twym więzieniem !",
+  },
+  {
+    id: 12,
+    title: "abstynentka z wyboru",
+    name: 'ty me ciało pełne udręki , wycierpiałoś srogie męki , zdrajcą ci byłam całe życie , już więcej wódki się nie chwycę , czy to koniak czy czysta stołowa zawsze będzie moja odmowa , nie pomogą i " złote słowa" , czy "kuszenie" czy czyjaś namowa , bo przysięgę serdeczną złożyłam że już więcej nie będę piła , ma przysiega jest prawie jak święta , wzmocnię rzeszę klubu abstynenta , jakże złudne jest ludzi mniemanie , że po wódce świat lepszym się stanie , świat jest piękny , także bez picia , głosić będę to do końca życia ',
+  },
+  {
+    id: 13,
+    title: "spacer",
+    name: "jest ciemno i zimno na dworze , a ja spaceruje sobie , ide wciąż przed siebie , i myślę o tobie",
+  },
+  {
+    id: 14,
+    title: "smutek",
+    name: "jakie smutne moje serce , jakie smutne moje oczy , przecież wiem że mnie kochasz więc czemu się ze mną droczysz",
+  },
+  {
+    id: 15,
+    title: "jesteś wszystkim",
+    name: "jesteś światłem co rozjaśnia moje życię , drogą gwiażdzistą po niebie , jesteś dla mnie wszystkim , bo bardzo kocham ciebie",
+  },
+  {
+    id: 16,
+    title: "pisze wiersze dla ciebie",
+    name: "piszę wiersze dla ciebie , z ogromnej serca potrzeby , piszę byś miłość zrozumiał , i sam pokochał mnie kiedyś",
+  },
+  {
+    id: 17,
+    title: "przeprosiny",
+    name: "gdy tamte wspomnę dni , ból serce moje rozdziera , bo przez głupotę swoją straciłam przyjaciela , zraniłam tak bardzo cię , lecz wybacz proszę mi ! , nie miej pretensji do mnie , za te minione dni , nie jestem taka zła , nie wiem co we mnie wstąpiło , i tak ogromnie , serce twoje zraniło ! , co mam uczynić powiedz? byś znowu się do mnie uśmiechnął , by było jak dawniej ! , tego moje serce pragnie",
+  },
+  {
+    id: 18,
+    title: "dla ciebie miła",
+    name: "przyjaciółko moja miła , tyś me serce zasmuciła , gdybyś ty mnie dobrze znała , nigdy byś żle nie myślała , każde słowo nie ważyła zaufaniem mnie darzyła , tłumaczyła , wyjaśniała , jak byś we mnie wroga miała , takie życie smutne złe gdy wokoło boją się , bez powodu bez przyczyny , przypisują komuś winy , trzeba wiedzieć , trzeba zbadac , by wśród ludzi potem gadać , spójrz wokoło , otwórz oczy , a nie jedno cię zaskoczy , bo w przyjaciół gęstym gronie  , wróg się czai zemstą zionie , i znienacka cios da w plecy , choć dziś szczerze patrzy w oczy , tych się bój , co przytakują , a do zdrady sie szykują ",
   },
 ];
 
