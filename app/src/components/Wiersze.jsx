@@ -3,6 +3,7 @@ import styles from "./wiersze.module.css";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+import MattButtonEffect from "./Buttons/MattButtonEffect";
 
 // const truncateString = (str, maxLength) => {
 //   return str.length > maxLength ? `${str.slice(0, maxLength)}...` : str;
@@ -32,7 +33,7 @@ export default function Wiersze({ item, handleActive }) {
       </span>
         <h2 className={styles.title}>{item.title}</h2>
       <p> {truncateString(item.name, maxLength)}</p>
-
+  
       <span className={styles.bottom}>
         {" "}
         <FontAwesomeIcon icon={faQuoteRight} />

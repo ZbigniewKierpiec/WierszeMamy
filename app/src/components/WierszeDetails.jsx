@@ -4,6 +4,7 @@ import styles from "./WierszeDetails.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import MattButtonEffect from "./Buttons/MattButtonEffect";
 export default function WierszeDetails({ setActive, details }) {
   console.log(details);
   return (
@@ -16,7 +17,10 @@ export default function WierszeDetails({ setActive, details }) {
       <span className={styles.left}>
         <FontAwesomeIcon icon={faQuoteLeft} />
       </span>
-                   <h1>{details.name}</h1>
+
+      <MattButtonEffect/>
+
+      <h1>{details.name}</h1>
       <span className={styles.right}>
         {" "}
         <FontAwesomeIcon icon={faQuoteRight} />{" "}

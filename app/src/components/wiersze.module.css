@@ -13,8 +13,6 @@
   border-radius: 0.3rem;
   cursor: pointer;
   text-transform: capitalize;
-   
-
 }
 
 .top {
@@ -25,7 +23,7 @@
   color: #bfa100;
   color: white;
 }
-.title{
+.title {
   position: absolute;
   top: 10%;
   text-transform: capitalize;

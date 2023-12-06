@@ -8,6 +8,7 @@ import Logo from "../components/Logo";
 import Wiersze from "../components/wiersze";
 import WierszeDetails from "../components/WierszeDetails";
 import Footer from "../components/Footer";
+import MattButtonEffect from "../components/Buttons/MattButtonEffect";
 
 const data = [
   {
@@ -117,7 +118,9 @@ export default function AppLayout() {
       <PageNav></PageNav>
       {active && <WierszeDetails details={details} setActive={setActive} />}
       <div className={styles.section}>
-        <section className={styles.main}>
+        <section
+          className={`${styles.main} ${active ? styles.mainActive : ""}`}
+        >
           {/* <table className={styles.table}>
             <thead>
               <tr>
@@ -176,9 +179,13 @@ export default function AppLayout() {
         <nav className={styles.nav}>
           <ul className="pagination">
             <li className={styles.itemBtn}>
-              <button className={styles.btn} onClick={prevPage} href="#">
+              {/* <button className={styles.btn} onClick={prevPage} href="#">
                 Prev
-              </button>
+              </button> */}
+
+              <MattButtonEffect type={"leftPagination"} onClick={prevPage}>
+                Prev
+              </MattButtonEffect>
             </li>
             {/* className={`${styles.items} ${currentPage === item ? "active" : ""}`} */}
             {numbers.map((item, index) => (
@@ -199,9 +206,13 @@ export default function AppLayout() {
             ))}
 
             <li className={styles.itemBtn}>
-              <button className={styles.btn} onClick={nextPage} href="#">
+              {/* <button className={styles.btn} onClick={nextPage} href="#">
                 Next
-              </button>
+              </button> */}
+
+              <MattButtonEffect type={"rightPagination"} onClick={nextPage}>
+                next
+              </MattButtonEffect>
             </li>
           </ul>
         </nav>
