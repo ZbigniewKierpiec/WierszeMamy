@@ -80,7 +80,7 @@ const data = [
   {
     id: 14,
     title: "smutek",
-    name: "jakie smutne moje serce , jakie smutne moje oczy , przecież wiem że mnie kochasz więc czemu się ze mną droczysz",
+    name: "jakie smutne moje serce , jakie smutne moje  oczy , przecież wiem że mnie kochasz więc czemu się ze mną droczysz",
   },
   {
     id: 15,

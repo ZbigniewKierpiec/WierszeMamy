@@ -35,6 +35,7 @@ export default function Detale({ setActive, details }) {
         <span onClick={() => setActive(false)} className={styles.times}>
           <FontAwesomeIcon icon={faXmark} />
         </span>
+
         <div className={styles.poem}>
           <h1>{details.title}</h1>
           <h2>by Halina Kierpiec</h2>
