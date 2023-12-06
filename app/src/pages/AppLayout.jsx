@@ -106,7 +106,7 @@ const data = [
 
 export default function AppLayout() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   const recordsPerPage = 6;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
