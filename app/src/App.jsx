@@ -9,7 +9,7 @@ import Hamburger from "./components/Hamburger/Hamburger";
 function App() {
   return (
     <>
-  <Hamburger color={'black'}/>
+
     <BrowserRouter>
       <Routes>
         <Route index element={<Homepage />} />

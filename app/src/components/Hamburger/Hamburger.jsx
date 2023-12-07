@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styles from '../Hamburger/Hamburger.module.scss';
 
-export default function Hamburger({color}) {
+export default function Hamburger({color , onClick}) {
 
 const bg=color;
 
-return <div  className={styles.main}>
+return <div  onClick={onclick}    className={styles.main}>
 
 <div className={styles.demowrapper}>
   <label className={styles.hamburger}>

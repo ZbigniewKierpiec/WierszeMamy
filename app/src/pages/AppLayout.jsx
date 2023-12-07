@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import MattButtonEffect from "../components/Buttons/MattButtonEffect";
 import Detale from "../components/Testy/Detale";
 import Hamburger from "../components/Hamburger/Hamburger";
+import MenuMobile from "../components/MenuMobile/MenuMobile";
 
 const data = [
   {
@@ -115,10 +116,17 @@ export default function AppLayout() {
   const npages = Math.ceil(data.length / recordsPerPage);
   const numbers = [...Array(npages + 1).keys()].slice(1);
   const [details, setDetails] = useState([]);
+  const [isToggled, setIsToggled] = useState(false);
+  function handleHamburgerClick(params) {
+    console.log('dziala')
+  }
+
   return (
     <main className={styles.app}>
    
-      <PageNav></PageNav>
+      <PageNav  ></PageNav>
+      <Hamburger  color={'black'}/>
+ 
       {active && <Detale details={details} setActive={setActive} />}
       <div className={styles.section}>
         <section
