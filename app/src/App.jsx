@@ -5,8 +5,11 @@ import Homepage from "./pages/Homepage";
 import AppLayout from "./pages/AppLayout";
 import PageNotFound from "./pages/PageNotFound";
 import Login from "./pages/Login";
+import Hamburger from "./components/Hamburger/Hamburger";
 function App() {
   return (
+    <>
+  <Hamburger color={'black'}/>
     <BrowserRouter>
       <Routes>
         <Route index element={<Homepage />} />
@@ -16,6 +19,9 @@ function App() {
       </Routes>
     </BrowserRouter>
    
+
+    </>
+  
    
   );
 }

@@ -10,6 +10,7 @@ import WierszeDetails from "../components/WierszeDetails";
 import Footer from "../components/Footer";
 import MattButtonEffect from "../components/Buttons/MattButtonEffect";
 import Detale from "../components/Testy/Detale";
+import Hamburger from "../components/Hamburger/Hamburger";
 
 const data = [
   {
@@ -116,6 +117,7 @@ export default function AppLayout() {
   const [details, setDetails] = useState([]);
   return (
     <main className={styles.app}>
+   
       <PageNav></PageNav>
       {active && <Detale details={details} setActive={setActive} />}
       <div className={styles.section}>
@@ -242,3 +244,4 @@ export default function AppLayout() {
     }
   }
 }
+
