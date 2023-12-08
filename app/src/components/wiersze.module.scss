@@ -1,4 +1,4 @@
-
+@import '../abstracts/mixins';
 
 .wiersze {
   position: relative;
@@ -15,6 +15,7 @@
   border-radius: 0.3rem;
   cursor: pointer;
   text-transform: capitalize;
+  
 }
 
 .top {

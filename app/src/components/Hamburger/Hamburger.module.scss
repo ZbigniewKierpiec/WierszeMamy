@@ -2,12 +2,27 @@
 @import '../abstracts/mixins';
 
 .main {
-    position: absolute;
-    top: 0;
-    right: 0;
+   
     z-index: 999999999999999999999999999999999999999999999999;
     text-align: center;
+    display: none;
+    @include respond(phone) {
+      display: block !important;
 
+      position:absolute;
+
+      right: 0;
+      // position: relative;
+      // position: absolute;
+      // top: 0;
+      // right: 0;
+      // background-color: black;
+    &.active{
+     
+      top: 4px;
+     
+    }
+       }
     .demowrapper {
       // min-height: 300px;
       display: flex;
@@ -18,14 +33,17 @@
       .click {
         font-size: 12px;
         text-transform: uppercase;
-        margin-top: 10px;
+          margin-top: 10px;
+         
       }
     }
   
     .hamburger {
       position: relative;
       width: 90px;
+    
       height: 90px;
+    
       display: inline-flex;
       flex-direction: column;
       justify-content: space-between;
@@ -75,3 +93,9 @@
       }
     }
   }
+
+
+
+
+
+

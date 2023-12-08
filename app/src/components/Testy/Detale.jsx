@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import styles from "./Detale.module.css";
+import styles from "./Detale.module.scss";
 
 export default function Detale({ setActive, details }) {
   const [formattedText, setFormattedText] = useState("");

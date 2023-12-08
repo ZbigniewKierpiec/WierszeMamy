@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import styles from "./WierszeDetails.module.css";
+import styles from "./WierszeDetails.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";

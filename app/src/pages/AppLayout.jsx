@@ -13,6 +13,7 @@ import Detale from "../components/Testy/Detale";
 import Hamburger from "../components/Hamburger/Hamburger";
 import MenuMobile from "../components/MenuMobile/MenuMobile";
 
+
 const data = [
   {
     id: 1,
@@ -122,10 +123,11 @@ export default function AppLayout() {
   }
 
   return (
+  
     <main className={styles.app}>
-   
-      <PageNav  ></PageNav>
-      <Hamburger  color={'black'}/>
+  
+  <PageNav></PageNav> 
+    
  
       {active && <Detale details={details} setActive={setActive} />}
       <div className={styles.section}>
@@ -182,6 +184,9 @@ export default function AppLayout() {
               </button>
             ))}
           </div> */}
+
+
+
           {records.map((item) => (
             <Wiersze key={item.id} handleActive={handleActive} item={item} />
           ))}

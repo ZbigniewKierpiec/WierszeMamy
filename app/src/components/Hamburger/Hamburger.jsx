@@ -1,15 +1,24 @@
 import React, { useState } from "react";
 import styles from '../Hamburger/Hamburger.module.scss';
 
-export default function Hamburger({color , onClick}) {
+export default function Hamburger({color , onTouchStart , isActive }) {
 
 const bg=color;
 
-return <div  onClick={onclick}    className={styles.main}>
+
+const handleChange = (e) => {
+   console.log(isActive)
+   onTouchStart()
+};
+
+
+
+return <div   onTouchStart={onclick} className={`${styles.main} ${isActive ? styles.active : ''}`}    >
+
 
 <div className={styles.demowrapper}>
-  <label className={styles.hamburger}>
-    <input className={styles.hamburgerinput} type="checkbox"/>
+  <label  className={styles.hamburger}>
+    <input      checked={isActive}     onChange={(e)=>handleChange(e)}        className={styles.hamburgerinput} type="checkbox"/>
       
     <span style={{background:bg}} className={`${styles.hamburgerline} ${styles.first}`}></span>
     <span style={{background:bg}} className={`${styles.hamburgerline} ${styles.second}`}></span>
@@ -24,3 +33,4 @@ return <div  onClick={onclick}    className={styles.main}>
 
 
 }
+

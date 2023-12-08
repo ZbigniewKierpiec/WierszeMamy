@@ -1,3 +1,6 @@
+
+@import '../abstracts/mixins';
+
 .box {
   width: 60%;
   height: 75%;
@@ -16,10 +19,31 @@
  
   border-radius: 0.3rem;
   letter-spacing: 0.1rem;
-  font-family: Georgia, sans-serif;
+  // font-family: Georgia, sans-serif;
+  font-family: 'Lora', serif;
+ color: black;
+  @include respond(phone) {
+   width: 80%;
+ background-color: #bfa100;
+ background: -webkit-linear-gradient(to right, #ffe6f1, #a3c6e8);
+ background: linear-gradient(to right, #ffe6f1, #a3c6e8); /* Adjust colors as needed */
+   background: -webkit-linear-gradient(to right, #ffe6f1, #a3c6e8);
+  }
+
+
+
 }
 #flexcontainer {
-  
+ 
+
+  @include respond(phone) {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    
+   }
+
+
   width: 750px;
    height: 100%;
   margin: 0px auto;
@@ -27,14 +51,27 @@
  
 }
 .poem {
+ 
   width: 375px;
-  
+
   margin: auto;
   /*padding: 10px 0;*/
   font-family: Baskerville;
+
   font-size: 17px;
   font-size: 2rem;
   text-align: left;
+
+  @include respond(phone) {
+   
+  font-size: 17px;
+  font-size: 2.2rem;
+  text-align: left;
+
+    
+   }
+
+
 }
 .p{
     margin-bottom: 15px;
@@ -52,6 +89,7 @@
 .poem h1 {
     font-size: 34px;
     margin-bottom: 10px;
+
   }
 
   .poem h2 {
@@ -63,7 +101,8 @@
   .poem h2+p:first-letter {
     float: left;
     font-size: 40px;
-    margin: 12px 5px 0px 0px;
+    // margin: 12px 5px 0px 0px;
+    margin: 0px 5px 0px 0px;
   }
 
 

@@ -7,7 +7,9 @@
   background-color: rgb(68, 157, 230);
   font-size: 5rem;
   color: white;
-  
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   @include respond(phone) {
    
     width: 100% !important;
@@ -16,15 +18,15 @@
 }
 
 .section {
-  margin: 0 auto;
+  // margin: 0 auto;
   width: 90%;
   height: calc(85vh);
   /* background-color: skyblue; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
+  justify-content:center;
+  align-items: flex-end !important;
+
   @include respond(phone) {
    
     width: 100% !important;
@@ -33,7 +35,7 @@
 }
 
 .main {
-  /* position: relative; */
+   position: relative;
   transition: all 0.3s linear;
   width: 95%;
   height: 85%;
@@ -43,13 +45,13 @@
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 2rem;
   padding: 3rem;
-
+overflow: hidden;
   @include respond(phone) {
     grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, 1fr);
   width: 100%;
   }
-
+overflow: scroll;
 
 }
 .mainActive {
@@ -87,6 +89,14 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
+  @include respond(phone) {
+  position: fixed;
+  top:10%;
+  left:50%;
+  transform: translateX(-50%);
+  }
+
+
 }
 
 .list {
