@@ -3,6 +3,7 @@ import styles from "./Homepage.module.scss";
 import { useNavigate } from "react-router-dom";
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
+import 'animate.css';
 export default function Homepage() {
   const navigate = useNavigate();
 
@@ -14,7 +15,7 @@ export default function Homepage() {
     <main className={styles.homepage}>
 
       <section>
-        <h1 className={styles.title}>
+        <h1 className={`animate__animated animate__fadeInDown   animate__delay-1s   animate__slower     ${styles.title}`}>
           Światło wierszy Haliny Kierpiec <br></br>  <br></br>  {" "}
           <span className={styles.span}>
             {" "}
@@ -23,7 +24,7 @@ export default function Homepage() {
         </h1>
       </section>
 
-      <button onClick={handleClick} className={styles.titleBtn}>
+      <button      onClick={handleClick} className={`animate__animated animate__fadeInUp animate__delay-3s animate__slow    ${styles.titleBtn}`}>
         Zacznij Czytac
       </button>
       <Footer/>

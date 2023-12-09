@@ -4,7 +4,7 @@ import styles from "./PageNav.module.scss";
 import Logo from "./Logo";
 import Hamburger from '../components/Hamburger/Hamburger'
 import { useMemo } from "react";
-
+import 'animate.css';
 export default function PageNav() {
 
 const[isActive , setIsActive]=useState(false);
@@ -21,13 +21,13 @@ const[isActive , setIsActive]=useState(false);
   return (
   
  <nav className={styles.nav}>
-   <div className={styles.wraper}>
+   <div className={`${styles.wraper} ${isActive ? `${styles.active} animate__animated animate__fadeInDown  `:''}`  }>
         </div> 
 
     <Logo/>
 
 
- <ul className={`${styles.ul} ${isActive ? styles.active : ''}`} >
+ <ul className={`  ${styles.ul} ${isActive ? `${styles.active}   animate__animated animate__fadeInDown  animate__slow animate__delay-1s  `     : ''}`} >
        
         <li>
           <NavLink to="/">Home</NavLink>

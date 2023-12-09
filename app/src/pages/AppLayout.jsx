@@ -121,10 +121,10 @@ export default function AppLayout() {
   function handleHamburgerClick(params) {
     console.log('dziala')
   }
-
+// {`  ${styles.ul} ${isActive ? `${styles.active}   animate__animated animate__fadeInDown  animate__slow animate__delay-1s  `     : ''}`
   return (
   
-    <main className={styles.app}>
+    <main className={`${styles.app} ${details ? `${styles.app}  animate__animated animate__fadeIn animate__slower  `:''}  `}>
   
   <PageNav></PageNav> 
     

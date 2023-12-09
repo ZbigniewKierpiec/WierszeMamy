@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Detale.module.scss";
-
-export default function Detale({ setActive, details }) {
+import 'animate.css';
+export default function Detale({ setActive, details , isActive }) {
   const [formattedText, setFormattedText] = useState("");
   console.log(details.name);
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function Detale({ setActive, details }) {
     }
   }, [details]);
   return (
-    <div className={styles.box}>
+    <div className={`${styles.box} ${details ? `${styles.box} animate__animated animate__fadeIn` : ''}`}>
       <div id={styles.flexcontainer}>
         <span onClick={() => setActive(false)} className={styles.times}>
           <FontAwesomeIcon icon={faXmark} />

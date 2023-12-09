@@ -4,7 +4,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import MattButtonEffect from "./Buttons/MattButtonEffect";
-
+import 'animate.css';
 // const truncateString = (str, maxLength) => {
 //   return str.length > maxLength ? `${str.slice(0, maxLength)}...` : str;
 // };
@@ -27,7 +27,7 @@ export default function Wiersze({ item, handleActive }) {
   const maxLength = 170;
   
   return (
-    <div onClick={()=>handleActive(item)} className={styles.wiersze}>
+    <div onClick={()=>handleActive(item)} className={`${styles.wiersze} ${item} ? animate__animated animate__fadeInDown  animate__slow animate__delay-1s `}>
       <span className={styles.top}>
         <FontAwesomeIcon icon={faQuoteLeft} />
       </span>
