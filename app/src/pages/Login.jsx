@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Login.module.css";
+import styles from "./Login.module.scss";
 import PageNav from "../components/PageNav";
 import Button from "../components/Button";
 export default function Login() {

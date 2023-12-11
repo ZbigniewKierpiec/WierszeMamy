@@ -36,6 +36,7 @@
 //  background: linear-gradient(to right, #ffe6f1, #a3c6e8); /* Adjust colors as needed */
 //    background: -webkit-linear-gradient(to right, #ffe6f1, #a3c6e8);
    background-color: #a3c6e8;
+   overflow: hidden;
   }
 
 
@@ -71,7 +72,12 @@
   text-align: left;
 
   @include respond(phone) {
-   
+ 
+ display: flex;
+flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
   font-size: 17px;
   font-size: 2.2rem;
   text-align: left;
@@ -82,6 +88,8 @@
 
 }
 .p{
+  margin-left: 3rem;
+  text-align: left;
     margin-bottom: 15px;
     line-height: 1.45em;  
 }
@@ -104,6 +112,8 @@
     font-size: 18px;
     font-style: italic;
     margin-bottom: 30px;
+
+    color: rgb(0, 0, 0);
   }
 
   .poem h2+p:first-letter {
@@ -132,7 +142,7 @@
   cursor: pointer;
 
   @include respond(phone) {
-   top: 12%;
+   top: 10%;
    right: 10%;
    }
 
@@ -162,11 +172,43 @@
   color: white;
 }
 
-h1 {
-  font-size: 2.7rem;
+
+
+
+.line {
+
+  position: relative !important;
+  font-size: 3rem !important;
   text-transform: capitalize;
   line-height: 40px;
   text-align: left;
+  padding: 0 1rem;
+  font-weight: bolder;
 
-  /* line-height: 50px; */
+&::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -9%;
+  transform: translate(-50% , -50%);
+  width: 14%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.171);
 }
+
+&::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 109% !important;
+
+  transform: translate(-50% , 50%);
+  width: 14%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.171);
+}
+
+}
+

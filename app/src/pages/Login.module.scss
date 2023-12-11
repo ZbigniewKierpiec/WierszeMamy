@@ -1,3 +1,4 @@
+@import '../abstracts/mixins';
 .login{
     height: 100vh;
     padding: 2.4rem;
@@ -19,6 +20,13 @@
     width: 48rem;
     margin: 8rem auto;
     color: white;
+    
+  @include respond(phone) {
+    
+   width: 100%;
+   
+  }
+
   }
   
   .row {

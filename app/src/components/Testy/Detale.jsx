@@ -37,7 +37,7 @@ export default function Detale({ setActive, details , isActive }) {
         </span>
 
         <div className={styles.poem}>
-          <h1>{details.title}</h1>
+          <h1 className={styles.line}>{details.title}</h1>
           <h2>by Halina Kierpiec</h2>
           <p className={styles.p}>{formattedText}</p>
         </div>

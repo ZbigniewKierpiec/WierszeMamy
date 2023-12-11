@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import styles from "./AppLayout.module.scss";
@@ -12,7 +12,6 @@ import MattButtonEffect from "../components/Buttons/MattButtonEffect";
 import Detale from "../components/Testy/Detale";
 import Hamburger from "../components/Hamburger/Hamburger";
 import MenuMobile from "../components/MenuMobile/MenuMobile";
-
 
 const data = [
   {
@@ -105,7 +104,22 @@ const data = [
     title: "dla ciebie miła",
     name: "przyjaciółko moja miła , tyś me serce zasmuciła , gdybyś ty mnie dobrze znała , nigdy byś żle nie myślała , każde słowo nie ważyła zaufaniem mnie darzyła , tłumaczyła , wyjaśniała , jak byś we mnie wroga miała , takie życie smutne złe gdy wokoło boją się , bez powodu bez przyczyny , przypisują komuś winy , trzeba wiedzieć , trzeba zbadac , by wśród ludzi potem gadać , spójrz wokoło , otwórz oczy , a nie jedno cię zaskoczy , bo w przyjaciół gęstym gronie  , wróg się czai zemstą zionie , i znienacka cios da w plecy , choć dziś szczerze patrzy w oczy , tych się bój , co przytakują , a do zdrady sie szykują ",
   },
-];
+  {
+    id: 19,
+    title: "Och młodości, młodości ",
+    name: " Och, młodości, młodości,Czemuś się już skończyła!  Jakże  wspaniała  i piękna,Lecz jakże krótka byłaś.Wspominam chwile tamte,A w oczach moich łzy.Och, młodości, młodości!Już się nie wrócisz ty.Jakże bym chciała być młoda, A już jesień życia ma. Och, młodości, młodości,Jakże ty krótko trwasz! ",
+  },
+  {
+    id: 20,
+    title: "Samobójczyni",
+    name: "Dziewczyna samobójczyni,Wciąż pogłębia swą rozterkę.Z myślami swoimi, czy znosić moc niepowodzeń,Czy odejść cichutko, jak złodziej.Bo cóż jej życie warte,Wyciąga wciąż złą kartę.Myśli, myśli i wzdycha, Płacz się z jej piersi wyrywa.Zastanów się, dziewczyno, Nie jesteś ty jedyną. Co w swojej rozterce, Złamano niejedno serce!  ",
+  },
+  {
+    id: 21,
+    title: "przeprosiny na pożegnanie",
+    name: "wręczam ci tę czrewoną róże , dzis na  przeprosiny , wybacz każdą chwilę w której cię raniłam Głupia byłam przecież cię kocham więc miłość moją , dziś tobie oddaję i teraz na zawsze , się z tobą rozstaję bo czasem tak bywa w życiu tym niestety że bardzo siś kocha , a odchodzi się bez słowa",
+  },
+]; 
 
 export default function AppLayout() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -118,17 +132,21 @@ export default function AppLayout() {
   const numbers = [...Array(npages + 1).keys()].slice(1);
   const [details, setDetails] = useState([]);
   const [isToggled, setIsToggled] = useState(false);
+
   function handleHamburgerClick(params) {
-    console.log('dziala')
+    console.log("dziala");
   }
-// {`  ${styles.ul} ${isActive ? `${styles.active}   animate__animated animate__fadeInDown  animate__slow animate__delay-1s  `     : ''}`
+  // {`  ${styles.ul} ${isActive ? `${styles.active}   animate__animated animate__fadeInDown  animate__slow animate__delay-1s  `     : ''}`
+
+
   return (
-  
-    <main className={`${styles.app} ${details ? `${styles.app}  animate__animated animate__fadeIn animate__slower  `:''}  `}>
-  
-  <PageNav></PageNav> 
-    
- 
+    <main
+      className={`${styles.app} ${
+        details ? `${styles.app}  animate__animated animate__fadeInLeft   ` : ""
+      }  `}
+    >
+      <PageNav></PageNav>
+
       {active && <Detale details={details} setActive={setActive} />}
       <div className={styles.section}>
         <section
@@ -184,8 +202,6 @@ export default function AppLayout() {
               </button>
             ))}
           </div> */}
-
-
 
           {records.map((item) => (
             <Wiersze key={item.id} handleActive={handleActive} item={item} />
@@ -257,4 +273,3 @@ export default function AppLayout() {
     }
   }
 }
-
