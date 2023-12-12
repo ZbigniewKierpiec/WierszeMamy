@@ -12,7 +12,7 @@ import MattButtonEffect from "../components/Buttons/MattButtonEffect";
 import Detale from "../components/Testy/Detale";
 import Hamburger from "../components/Hamburger/Hamburger";
 import MenuMobile from "../components/MenuMobile/MenuMobile";
-
+import Arrow from "../components/Arrow/Arrow";
 const data = [
   {
     id: 1,
@@ -119,7 +119,7 @@ const data = [
     title: "przeprosiny na pożegnanie",
     name: "wręczam ci tę czrewoną róże , dzis na  przeprosiny , wybacz każdą chwilę w której cię raniłam Głupia byłam przecież cię kocham więc miłość moją , dziś tobie oddaję i teraz na zawsze , się z tobą rozstaję bo czasem tak bywa w życiu tym niestety że bardzo siś kocha , a odchodzi się bez słowa",
   },
-]; 
+];
 
 export default function AppLayout() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -137,7 +137,6 @@ export default function AppLayout() {
     console.log("dziala");
   }
   // {`  ${styles.ul} ${isActive ? `${styles.active}   animate__animated animate__fadeInDown  animate__slow animate__delay-1s  `     : ''}`
-
 
   return (
     <main
@@ -216,7 +215,7 @@ export default function AppLayout() {
               </button> */}
 
               <MattButtonEffect type={"leftPagination"} onClick={prevPage}>
-                Prev
+                <Arrow isActive={currentPage !== 1} type={"left"} />
               </MattButtonEffect>
             </li>
             {/* className={`${styles.items} ${currentPage === item ? "active" : ""}`} */}
@@ -243,7 +242,7 @@ export default function AppLayout() {
               </button> */}
 
               <MattButtonEffect type={"rightPagination"} onClick={nextPage}>
-                next
+                <Arrow isActive={currentPage !== npages} type={"right"} />
               </MattButtonEffect>
             </li>
           </ul>

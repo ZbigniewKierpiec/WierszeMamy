@@ -15,6 +15,7 @@
   background-position: center;
   padding: 2.5rem 5rem;
   color: rgba(255, 255, 255, 0.856);
+
   font-size: 4rem;
   font-family: monospace;
   display: flex;
@@ -89,13 +90,13 @@
   font-size: 5.5rem;
   letter-spacing: 0.4rem;
   color: rgba(57, 66, 36, 0.74);
-  
+  color: rgba(255, 255, 255, 0.788);
   @include respond(phone) {
     text-align: center;
 font-size: 2rem;
-font-weight:200;
+font-weight:550;
 animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-
+color: rgba(49, 56, 32, 0.644);
 
   }
 }
@@ -107,7 +108,7 @@ animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
     font-size: 2.6rem;
      margin: 0 auto;
      display: block;
-   
+     font-weight: 900;
      text-align: center;
       }
 
