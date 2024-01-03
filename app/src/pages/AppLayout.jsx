@@ -152,6 +152,7 @@ export default function AppLayout() {
 
   return (
     <>
+      <PageNav/>
       {active && <Wed details={details} setActive={setActive} />}
       <main
         className={`${styles.app} ${
@@ -160,6 +161,8 @@ export default function AppLayout() {
             : ""
         }  `}
       >
+      {/* <Hamburger/> */}
+   
         <div className={styles.section}>
           <section
             className={`${styles.main} ${active ? styles.mainActive : ""}`}
