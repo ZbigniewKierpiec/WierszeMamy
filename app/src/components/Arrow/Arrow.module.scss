@@ -1,4 +1,5 @@
 $white: #ffffff;
+
 $orange: #f47721;
 $orange: #5585b5;
 
@@ -7,10 +8,9 @@ $cream: #fff8ec;
 svg.fancy_arrow {
   width: 180px;
   width: 4rem;
-  transition: opacity .8s linear;
+  transition: opacity 0.8s linear;
   //   animation: bounce-arrow 4s 1s ease forwards infinite;
 
- 
   &.left {
     transform: rotate(90deg);
   }
@@ -20,7 +20,6 @@ svg.fancy_arrow {
   g.arrow {
     fill: $orange;
 
-  
     // box-shadow: 0px 0px 10px #333;
   }
 
@@ -28,9 +27,9 @@ svg.fancy_arrow {
     fill: lighten($orange, 20%);
     animation: illuminate-lights 2s ease forwards infinite;
 
-  // &.active{
-  //   animation: illuminate-lights 2s ease forwards infinite;
-  // }
+    // &.active{
+    //   animation: illuminate-lights 2s ease forwards infinite;
+    // }
 
     &:nth-child(2) {
       animation-delay: 0.1s;
@@ -86,12 +85,10 @@ svg.fancy_arrow {
   }
 }
 
-
-.active{
-
+.active {
   fill: lighten($orange, 20%);
   animation: illuminate-lights 2s ease forwards infinite;
 }
-.activeS{
-display: block;
+.activeS {
+  display: block;
 }

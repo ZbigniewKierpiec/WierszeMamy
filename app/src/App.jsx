@@ -6,23 +6,27 @@ import AppLayout from "./pages/AppLayout";
 import PageNotFound from "./pages/PageNotFound";
 import Login from "./pages/Login";
 import Hamburger from "./components/Hamburger/Hamburger";
+
+import DetailsPages from "./pages/DetailsPages";
+import { AppProvider } from "./Context/Context";
+import Detale from "./components/Testy/Detale";
+import WierszeDetails from "./components/WierszeDetails";
 function App() {
   return (
     <>
+      <AppProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Homepage />} />
+            <Route path="app" element={<AppLayout />}></Route>
+            {/* <Route path="details" element={<Detale />}></Route> */}
 
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Homepage />} />
-        <Route path="app" element={<AppLayout />}></Route>
-        <Route path="login" element={<Login />}></Route>
-        <Route path="*" element={<PageNotFound />}></Route>
-      </Routes>
-    </BrowserRouter>
-   
-
+            <Route path="login" element={<Login />}></Route>
+            <Route path="*" element={<PageNotFound />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </AppProvider>
     </>
-  
-   
   );
 }
 

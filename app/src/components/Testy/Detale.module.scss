@@ -6,12 +6,15 @@
   height: 75%;
   height: 80%;
 
+
   background-color: red;
   background: #ff9a3c;
   position: absolute !important;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
+ 
+  top: 50%;
+ 
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 7;
   display: flex;
   justify-content: center;
@@ -26,11 +29,16 @@
   @include respond(phone) {
    width: 100%;
    height: 100%;
-    top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
 
+    top: 50%;
+    top: 0%;
+  left: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  position: absolute;
+    top: 50%;
+    
 //  background-color: #bfa100;
 //  background: -webkit-linear-gradient(to right, #ffe6f1, #a3c6e8);
 //  background: linear-gradient(to right, #ffe6f1, #a3c6e8); /* Adjust colors as needed */
@@ -49,7 +57,9 @@
     display: flex;
   justify-content: center;
   align-items: center;
-    
+    background-color: yellow;
+  
+    height: 50%;
    }
 
 

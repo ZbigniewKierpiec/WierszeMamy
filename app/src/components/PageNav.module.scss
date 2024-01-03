@@ -17,11 +17,14 @@
     margin: 0 0rem;
     margin: 0 auto;
     position: relative;
+  
     background-color: transparent;
-
+  
     width: 80%;
     width: 100%;
     position: absolute;
+    position: fixed !important;
+   
     top: 0;
     left: 0;
     right: 0;

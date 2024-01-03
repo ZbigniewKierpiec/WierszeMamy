@@ -1,0 +1,176 @@
+@import "../abstracts/mixins";
+
+.box {
+  height: 100svh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem;
+
+  border-radius: 0.3rem;
+  letter-spacing: 0.1rem;
+  // font-family: Georgia, sans-serif;
+  font-family: "Lora", serif;
+  color: black;
+  @include respond(phone) {
+    width: 100%;
+    height: 100%;
+
+    background-color: #a3c6e8;
+    overflow: hidden;
+  }
+}
+#flexcontainer {
+  @include respond(phone) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 80%;
+  }
+
+  width: 750px;
+  height: 100%;
+  margin: 0px auto;
+}
+.poem {
+  width: 375px;
+
+  margin: auto;
+  /*padding: 10px 0;*/
+  font-family: Baskerville;
+
+  font-size: 17px;
+  font-size: 2rem;
+  text-align: left;
+
+  @include respond(phone) {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 17px;
+    font-size: 2.2rem;
+    text-align: left;
+    // background-color: yellow;
+  }
+}
+.p {
+  margin-left: 3rem;
+  text-align: left;
+  margin-bottom: 15px;
+  line-height: 1.45em;
+  font-size: 2rem;
+}
+
+.poem h1,
+.poem h2 {
+  font-family: Baskerville;
+  font-weight: normal;
+  text-align: center;
+}
+
+.poem h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.poem h2 {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 30px;
+
+  color: rgb(0, 0, 0);
+}
+
+.poem h2 + p:first-letter {
+  float: left;
+  font-size: 40px;
+  // margin: 12px 5px 0px 0px;
+  margin: 0px 5px 0px 0px;
+}
+
+.poem p:first-line {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+
+.poem p:last-child {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.times {
+  position: absolute;
+  top: 0;
+  right: 3%;
+  cursor: pointer;
+
+  @include respond(phone) {
+    top: 10%;
+    right: 10%;
+    font-size: 4rem;
+  }
+}
+
+.title {
+  position: absolute;
+  top: 10%;
+  text-transform: capitalize;
+  font-size: 4rem;
+}
+
+.left {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 6rem;
+  color: #bfa100;
+  color: white;
+}
+
+.right {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  font-size: 6rem;
+  color: white;
+}
+
+.line {
+  position: relative !important;
+  font-size: 3rem !important;
+  text-transform: capitalize;
+  line-height: 40px;
+  text-align: left;
+  padding: 0 1rem;
+  font-weight: bolder;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -9%;
+    transform: translate(-50%, -50%);
+    width: 14%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.171);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 109% !important;
+
+    transform: translate(-50%, 50%);
+    width: 14%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.171);
+  }
+}

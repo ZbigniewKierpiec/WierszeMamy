@@ -1,0 +1,101 @@
+
+@import '../abstracts/mixins';
+
+.main {
+   
+    z-index: 999999999999999999999999999999999999999999999999;
+    text-align: center;
+    display: none;
+    @include respond(phone) {
+      display: block !important;
+
+      position:absolute;
+
+      right: 0;
+      // position: relative;
+      // position: absolute;
+      // top: 0;
+      // right: 0;
+      // background-color: black;
+    &.active{
+     
+      top: 4px;
+     
+    }
+       }
+    .demowrapper {
+      // min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  
+      .click {
+        font-size: 12px;
+        text-transform: uppercase;
+          margin-top: 10px;
+         
+      }
+    }
+  
+    .hamburger {
+      position: relative;
+      width: 90px;
+    
+      height: 90px;
+    
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 25px;
+  
+      .hamburgerinput {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+  
+        &:checked ~ .hamburgerline.second {
+          transform: rotate(-45deg);
+        }
+  
+        &:checked ~ .hamburgerline.first {
+          transform: translate(2px, 10px) rotate(-135deg);
+        }
+  
+        &:checked ~ .hamburgerline.third {
+          transform: translate(13px, -2px) rotate(-135deg);
+        }
+      }
+  
+      .hamburgerline {
+        width: 100%;
+        background: #fff;
+        height: 6px;
+        display: block;
+        border-radius: 6px;
+        transition: transform 0.4s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+        position: relative;
+  
+        &.first,
+        &.third {
+          width: 50%;
+        }
+  
+        &.third {
+          margin-left: 50%;
+          transform-origin: left;
+        }
+      }
+    }
+  }
+
+
+
+
+
+

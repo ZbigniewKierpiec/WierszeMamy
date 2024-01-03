@@ -31,19 +31,21 @@ export default function Wiersze({ item, handleActive }) {
 
   return (
     <div
-    className={`${styles.wiersze} ${item} ? animate__animated animate__fadeInDown  animate__slow animate__delay-1s `}
-    
-   
+      className={`${styles.wiersze} ${item} ? animate__animated animate__fadeInDown  animate__slow animate__delay-1s  `}
       onClick={() => handleActive(item)}
     >
       <span className={styles.top}>
         <FontAwesomeIcon icon={faQuoteLeft} />
       </span>
-      <h2 className={styles.title}>{item.title}</h2>
-      <p> {truncateString(item.name, maxLength)}</p>
+      <h2 data-aos="fade-right" data-aos-offset="150" className={styles.title}>
+        {item.title}
+      </h2>
+      <p data-aos="fade-left" data-aos-offset="130">
+        {" "}
+        {truncateString(item.name, maxLength)}
+      </p>
 
       <span className={styles.bottom}>
-        {" "}
         <FontAwesomeIcon icon={faQuoteRight} />
       </span>
     </div>

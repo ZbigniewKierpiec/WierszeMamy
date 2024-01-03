@@ -9,10 +9,15 @@ import Wiersze from "../components/wiersze";
 import WierszeDetails from "../components/WierszeDetails";
 import Footer from "../components/Footer";
 import MattButtonEffect from "../components/Buttons/MattButtonEffect";
-import Detale from "../components/Testy/Detale";
+
 import Hamburger from "../components/Hamburger/Hamburger";
 import MenuMobile from "../components/MenuMobile/MenuMobile";
 import Arrow from "../components/Arrow/Arrow";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useNavigate, useParams } from "react-router-dom";
+import { useAppContext } from "../Context/Context";
+import Wed from "../Testy2/Wed";
 const data = [
   {
     id: 1,
@@ -124,7 +129,7 @@ const data = [
 export default function AppLayout() {
   const [currentPage, setCurrentPage] = useState(1);
   const [active, setActive] = useState(false);
-  const recordsPerPage = 6;
+  const recordsPerPage = 8;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
   const records = data.slice(firstIndex, lastIndex);
@@ -132,128 +137,95 @@ export default function AppLayout() {
   const numbers = [...Array(npages + 1).keys()].slice(1);
   const [details, setDetails] = useState([]);
   const [isToggled, setIsToggled] = useState(false);
-
+  const navigate = useNavigate();
+  const { setAppDataValue } = useAppContext();
   function handleHamburgerClick(params) {
-    console.log("dziala");
+    console.log(active);
   }
+  console.log(active)
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  
+  }, []);
+
   // {`  ${styles.ul} ${isActive ? `${styles.active}   animate__animated animate__fadeInDown  animate__slow animate__delay-1s  `     : ''}`
 
   return (
-    <main
-      className={`${styles.app} ${
-        details ? `${styles.app}  animate__animated animate__fadeInLeft   ` : ""
-      }  `}
-    >
-      <PageNav></PageNav>
-
-      {active && <Detale details={details} setActive={setActive} />}
-      <div className={styles.section}>
-        <section
-          className={`${styles.main} ${active ? styles.mainActive : ""}`}
-        >
-          {/* <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>Name</th>
-              </tr>
-            </thead>
-            <tbody>
-              {records.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.id}</td>
-                  <td>{item.name}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table> */}
-          {/* <nav>
-            <ul className='pagination'>
-              <li className="page-item">
-                <a className="page-link" onClick={prevPage} href="#">
-                  Prev
-                </a>
-              </li>
-
-              {
-                numbers.map((item,index)=> <li className={`page-item ${currentPage === item ?'active':''}`} key={index}>
-                  <a className="page-link" href="#">{item}</a>
-                </li>   )
-              }
-
-
-              <li className="page-item">
-                <a className="page-link" onClick={nextPage} href="#">
-                  Next
-                </a>
-              </li>
-            </ul>
-          </nav> */}
-          {/* 
-          <div className="list-group">
+    <>
+      {active && <Wed details={details} setActive={setActive} />}
+      <main
+        className={`${styles.app} ${
+          details
+            ? `${styles.app}  animate__animated animate__fadeInLeft   `
+            : ""
+        }  `}
+      >
+        <div className={styles.section}>
+          <section
+            className={`${styles.main} ${active ? styles.mainActive : ""}`}
+          >
             {records.map((item) => (
-              <button
-                type="button"
-                className="list-group-item list-group-item-action fs-1 "
-                key={item.id}
-              >
-                {item.name}
-              </button>
+              <Wiersze key={item.id} handleActive={handleActive} item={item} />
             ))}
-          </div> */}
+          </section>
+        </div>
+      </main>
 
-          {records.map((item) => (
-            <Wiersze key={item.id} handleActive={handleActive} item={item} />
-          ))}
-        </section>
-
-        <nav className={styles.nav}>
-          <ul className="pagination">
-            <li className={styles.itemBtn}>
-              {/* <button className={styles.btn} onClick={prevPage} href="#">
+      <nav className={styles.nav}>
+        <ul className="pagination">
+          <li className={styles.itemBtn}>
+            {/* <button className={styles.btn} onClick={prevPage} href="#">
                 Prev
               </button> */}
 
-              <MattButtonEffect type={"leftPagination"} onClick={prevPage}>
-                <Arrow isActive={currentPage !== 1} type={"left"} />
-              </MattButtonEffect>
-            </li>
-            {/* className={`${styles.items} ${currentPage === item ? "active" : ""}`} */}
-            {numbers.map((item, index) => (
-              <li
-                key={index}
-                className={`page-item d-flex  align-items-center  ${
-                  currentPage === item ? "active" : ""
-                }`}
+            <MattButtonEffect type={"leftPagination"} onClick={prevPage}>
+              <Arrow isActive={currentPage !== 1} type={"left"} />
+            </MattButtonEffect>
+          </li>
+          {/* className={`${styles.items} ${currentPage === item ? "active" : ""}`} */}
+          {numbers.map((item, index) => (
+            <li
+              key={index}
+              className={`page-item d-flex  align-items-center  ${
+                currentPage === item ? "active" : ""
+              }`}
+            >
+              <a
+                onClick={() => changeCPage(item)}
+                className="page-link fs-2   "
+                href="#"
               >
-                <a
-                  onClick={() => changeCPage(item)}
-                  className="page-link fs-2   "
-                  href="#"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
+                {item}
+              </a>
+            </li>
+          ))}
 
-            <li className={styles.itemBtn}>
-              {/* <button className={styles.btn} onClick={nextPage} href="#">
+          <li className={styles.itemBtn}>
+            {/* <button className={styles.btn} onClick={nextPage} href="#">
                 Next
               </button> */}
 
-              <MattButtonEffect type={"rightPagination"} onClick={nextPage}>
-                <Arrow isActive={currentPage !== npages} type={"right"} />
-              </MattButtonEffect>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </main>
+            <MattButtonEffect type={"rightPagination"} onClick={nextPage}>
+              <Arrow isActive={currentPage !== npages} type={"right"} />
+            </MattButtonEffect>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 
   function handleActive(item) {
-    setDetails(item);
-    setActive((active) => (active = true));
+    setActive(!active)
+    const dataToSend = {
+      id: item.id,
+      name: item.name,
+      title: item.title,
+      page: currentPage,
+    };
+    setAppDataValue(dataToSend);
+
+    // navigate(`/details`);
+    // navigate(`/details`);
   }
 
   function nextPage() {
@@ -271,4 +243,8 @@ export default function AppLayout() {
       setCurrentPage(currentPage - 1);
     }
   }
+}
+
+{
+  /* {active && <Detale details={details} setActive={setActive} />} */
 }

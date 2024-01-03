@@ -9,7 +9,7 @@ export default function WierszeDetails({ setActive, details }) {
   console.log(details);
   return (
     <div className={styles.box}>
-      <span onClick={() => setActive(false)} className={styles.times}>
+      <span onClick={() => setActive()} className={styles.times}>
         {" "}
         <FontAwesomeIcon icon={faXmark} />
       </span>
