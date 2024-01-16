@@ -5,6 +5,9 @@
 .box {
   // position: relative;
   position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
   height: 100svh !important;
   display: flex;
   justify-content: center;
@@ -17,6 +20,7 @@
   font-family: "Lora", serif;
   color: black;
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+
   @include respond(phone) {
     width: 100%;
     height: 100%;
@@ -26,13 +30,19 @@
   }
 }
 #flexcontainer {
+  position: relative;
+
+// display: flex;
+overflow-y: scroll;
+padding-top: 15rem;
+background-color: #add8e6;
   @include respond(phone) {
     display: flex;
     justify-content: center;
     align-items: center;
 
 
-    height: 80%;
+   
   }
 
   width: 750px;
@@ -110,10 +120,10 @@
 
 .times {
   position: absolute;
-  top: 0;
-  right: 3%;
+  top: 5%;
+  right: 15%;
   cursor: pointer;
-
+  font-size: 4rem;
   @include respond(phone) {
     top: 10%;
     right: 10%;

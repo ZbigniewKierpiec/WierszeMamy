@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./PageNav.module.scss";
 import Logo from "./Logo";
 import Hamburger from '../components/Hamburger/Hamburger'
-import { useMemo } from "react";
+
 import 'animate.css';
 export default function PageNav() {
 

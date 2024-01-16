@@ -155,15 +155,17 @@ export default function AppLayout() {
       <PageNav/>
       {active && <Wed details={details} setActive={setActive} />}
       <main
+   
         className={`${styles.app} ${
           details
             ? `${styles.app}  animate__animated animate__fadeInLeft   `
             : ""
         }  `}
       >
-      {/* <Hamburger/> */}
-   
+ 
+  
         <div className={styles.section}>
+
           <section
             className={`${styles.main} ${active ? styles.mainActive : ""}`}
           >

@@ -9,6 +9,7 @@
   --color-light--1: #aaa;
   --color-light--2: #ececec;
   --color-light--3: #d6dee0;
+  overflow: hidden !important;
 }
 
 * {
@@ -31,6 +32,35 @@ body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; /* Enables momentum scrolling in iOS */
 }
+
+
+
+
+
+
+body {
+  font-family: "Manrope", sans-serif;
+  /* color: var(--color-light--2); */
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-y: scroll;
+  transition: background 0.2s linear;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-overflow-scrolling: touch; /* Enables momentum scrolling in iOS */
+  overflow: hidden;
+  overscroll-behavior: none;
+  &.light-mode {
+    background-color: white;
+  }
+  &.dark-mode {
+    background-color: #121316;
+  }
+}
+
+
+
+
+
 
 label {
   font-size: 1.6rem;
@@ -167,3 +197,35 @@ html {
 }
 
 ul{list-style: none;}
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+
+	border: 2px solid #555555;
+}
+
+
+

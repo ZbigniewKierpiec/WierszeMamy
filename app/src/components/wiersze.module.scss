@@ -1,7 +1,11 @@
 @import "../abstracts/mixins";
 
 .wiersze {
+
+ 
   position: relative;
+
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +16,7 @@
   word-spacing: 0.3rem;
   background-color: rgb(235, 105, 12);
   background-color: rgb(113, 154, 168);
-
+  
   border-radius: 0.3rem;
   cursor: pointer;
   text-transform: capitalize;

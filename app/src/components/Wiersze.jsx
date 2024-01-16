@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import MattButtonEffect from "./Buttons/MattButtonEffect";
 import "animate.css";
+import PageNav from "./PageNav";
 // const truncateString = (str, maxLength) => {
 //   return str.length > maxLength ? `${str.slice(0, maxLength)}...` : str;
 // };
@@ -30,10 +31,15 @@ export default function Wiersze({ item, handleActive }) {
   // className={`${styles.wiersze} ${item} ? animate__animated animate__fadeInDown  animate__slow animate__delay-1s `}
 
   return (
-    <div
+   <>
+  
+ <div
       className={`${styles.wiersze} ${item} ? animate__animated animate__fadeInDown  animate__slow animate__delay-1s  `}
       onClick={() => handleActive(item)}
     >
+
+
+
       <span className={styles.top}>
         <FontAwesomeIcon icon={faQuoteLeft} />
       </span>
@@ -49,5 +55,7 @@ export default function Wiersze({ item, handleActive }) {
         <FontAwesomeIcon icon={faQuoteRight} />
       </span>
     </div>
+   </>
+   
   );
 }

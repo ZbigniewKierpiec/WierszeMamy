@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import MattButtonEffect from "./Buttons/MattButtonEffect";
+
 export default function WierszeDetails({ setActive, details }) {
+
   console.log(details);
   return (
     <div className={styles.box}>

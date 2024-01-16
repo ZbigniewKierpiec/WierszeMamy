@@ -11,6 +11,7 @@ import DetailsPages from "./pages/DetailsPages";
 import { AppProvider } from "./Context/Context";
 import Detale from "./components/Testy/Detale";
 import WierszeDetails from "./components/WierszeDetails";
+import PageNav from "./components/PageNav";
 function App() {
   return (
     <>
